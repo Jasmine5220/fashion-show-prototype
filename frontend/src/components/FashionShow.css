@@ -1,0 +1,54 @@
+/* src/components/FashionShow.css */
+.fashion-show-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.fashion-show {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.video-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    right: 60px;
+    top: 50%;
+    transform: translateY(50%);
+}
+  
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #000;
+  }
+  
+.check-trends {
+    background-color: #ffc0cb;
+    color: #5d3a3a;
+    border: none;
+    padding: 10px 20px;
+    font-size: 36px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+.check-trends:hover {
+    background-color: #ffb6c1;
+}  

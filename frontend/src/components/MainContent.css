@@ -1,0 +1,11 @@
+/* src/components/MainContent.css */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.outfit-details, .fashion-show {
+    flex: 1;
+    margin: 10px;
+}

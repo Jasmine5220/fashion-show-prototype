@@ -1,0 +1,33 @@
+/* src/components/Sidebar.css */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.sidebar-item svg {
+    font-size: 24px;
+    color: #333;
+}
+
+.sidebar-item span {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
