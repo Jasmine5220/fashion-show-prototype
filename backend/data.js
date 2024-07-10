@@ -1,23 +1,25 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-import User from './models/User.js';
-import Outfit from './models/Outfit.js';
-import Comment from './models/Comment.js';
-import Like from './models/Like.js';
-import Item from './models/Item.js';
+import mongoose from "mongoose";
+import User from "./models/User.js";
+import Outfit from "./models/Outfit.js";
+import Comment from "./models/Comment.js";
+import Like from "./models/Like.js";
+import Item from "./models/Item.js";
+import dotenv from "dotenv";
 
 dotenv.config();
 
 const connectionString = process.env.MONGODB_CONNECTION_STRING;
 
-mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(connectionString)
   .then(() => {
-    console.log('MongoDB connected...');
-    insertSampleData();
+    console.log("MongoDB connected successfully");
+    insertData();
   })
-  .catch(err => console.log(err));
+  .catch((err) => {
+    console.log("MongoDB connection error", err);
+  });
 
-const insertSampleData = async () => {
+const insertData = async () => {
   try {
     // Clear existing data
     await User.deleteMany({});
@@ -26,60 +28,80 @@ const insertSampleData = async () => {
     await Like.deleteMany({});
     await Item.deleteMany({});
 
-    // Create users
+    // Create Users
     const users = await User.insertMany([
-      { username: 'user1', email: 'user1@example.com', password: 'password1' },
-      { username: 'user2', email: 'user2@example.com', password: 'password2' },
-      { username: 'user3', email: 'user3@example.com', password: 'password3' },
-      { username: 'user4', email: 'user4@example.com', password: 'password4' },
-      { username: 'user5', email: 'user5@example.com', password: 'password5' },
-      { username: 'user6', email: 'user6@example.com', password: 'password6' },
+      { username: 'user1', email: 'user1@example.com', password: 'password123' },
+      { username: 'user2', email: 'user2@example.com', password: 'password123' },
+      { username: 'user3', email: 'user3@example.com', password: 'password123' },
     ]);
 
-    // Create items
+    // Create Items
     const items = await Item.insertMany([
-      { itemType: 'Dress', name: 'Red Dress', description: 'A beautiful red dress.' },
-      { itemType: 'Shoes', name: 'Red Shoes', description: 'Matching red shoes.' },
-      { itemType: 'Bag', name: 'Red Bag', description: 'Stylish red bag.' },
-      { itemType: 'Accessory', name: 'Red Necklace', description: 'Elegant red necklace.' },
-      { itemType: 'Dress', name: 'Blue Dress', description: 'A stunning blue dress.' },
-      { itemType: 'Shoes', name: 'Blue Shoes', description: 'Matching blue shoes.' },
-      { itemType: 'Bag', name: 'Blue Bag', description: 'Stylish blue bag.' },
-      { itemType: 'Accessory', name: 'Blue Necklace', description: 'Elegant blue necklace.' },
-      { itemType: 'Dress', name: 'Green Dress', description: 'A charming green dress.' },
-      { itemType: 'Shoes', name: 'Green Shoes', description: 'Matching green shoes.' },
-      { itemType: 'Bag', name: 'Green Bag', description: 'Stylish green bag.' },
-      { itemType: 'Accessory', name: 'Green Necklace', description: 'Elegant green necklace.' }
+      {
+        itemType: "Shirt",
+        name: "Solid Classic Formal Shirt",
+        description: "Sojanya men rust brown cotten linen stylish formal shirt for men.",
+        price: 2249,
+        coupon_code: "MYNTRA300",
+        best_price: 414,
+        discount: "77% off",
+        discount_price: 517,
+        wishlist: true
+      },
+      {
+        itemType: "Jeans",
+        name: "Light Fade Stretchable Jeans",
+        description: "Louis philippe slim,comfortable & stretchable jeans for men.",
+        price: 2999,
+        coupon_code: "MYNTRA300",
+        best_price: 1499,
+        discount: "40% off",
+        discount_price: 1799,
+        wishlist: false
+      },
+      {
+        itemType: "Shoes",
+        name: "Leather Formal Oxford Shoes",
+        description: "Mochi black textured elegant formal shoes for men.",
+        price: 2481,
+        coupon_code: "MYNTRA300",
+        best_price: 1148,
+        discount: "17% off",
+        discount_price: 2481,
+        wishlist: true
+      }
     ]);
 
-    // Create outfits
+    // Create Outfits
     const outfits = await Outfit.insertMany([
-      { outfitid: 1, name: 'Red Outfit', description: 'A complete red outfit.', modelid: 1, items: items.slice(0, 4) },
-      { outfitid: 2, name: 'Blue Outfit', description: 'A complete blue outfit.', modelid: 2, items: items.slice(4, 8) },
-      { outfitid: 3, name: 'Green Outfit', description: 'A complete green outfit.', modelid: 3, items: items.slice(8, 12) }
+      {
+        outfitid: 1,
+        modelid: 1,
+        likes: Math.floor(Math.random() * 1000) + 100,
+        items: items.map(item => item.name),
+        wishlist: true
+      }
     ]);
 
-    // Create comments
+    // Create Likes
+    const likes = await Like.insertMany([
+      { userId: users[0]._id, outfitId: outfits[0]._id },
+      { userId: users[1]._id, outfitId: outfits[0]._id },
+      { userId: users[2]._id, outfitId: outfits[0]._id }
+    ]);
+
+    // Create Comments
     const comments = await Comment.insertMany([
-      { userId: users[0]._id, outfitId: outfits[0]._id, text: 'Love this outfit!' },
-      { userId: users[1]._id, outfitId: outfits[0]._id, text: 'Amazing style!' },
-      { userId: users[2]._id, outfitId: outfits[1]._id, text: 'Great color combination.' },
-      { userId: users[3]._id, outfitId: outfits[1]._id, text: 'Looks fantastic!' },
-      { userId: users[4]._id, outfitId: outfits[2]._id, text: 'Very stylish!' },
-      { userId: users[5]._id, outfitId: outfits[2]._id, text: 'I want this outfit.' },
+      { userId: users[0]._id, outfitId: outfits[0]._id, text: "Love this outfit!" },
+      { userId: users[1]._id, outfitId: outfits[0]._id, text: "Looks great!" },
+      { userId: users[2]._id, outfitId: outfits[0]._id, text: "Stylish and comfortable." }
     ]);
 
-    // Create likes
-    const likes = [];
-    for (let i = 0; i < 100; i++) {
-      likes.push({ userId: users[i % users.length]._id, outfitId: outfits[i % outfits.length]._id });
-    }
-    await Like.insertMany(likes);
-
-    console.log('Sample data inserted successfully.');
+    console.log("Data inserted successfully");
     process.exit();
-  } catch (err) {
-    console.error(err);
+  } catch (error) {
+    console.error("Error inserting data", error);
     process.exit(1);
   }
 };
+
