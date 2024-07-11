@@ -19,3 +19,4 @@ function MainContent({ outfitItems, videoUrl }) {
 }
 
 export default MainContent;
+
