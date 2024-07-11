@@ -46,6 +46,7 @@ const insertData = async () => {
         best_price: 414,
         discount: "77% off",
         discount_price: 517,
+        rating: 3.5,
         wishlist: true
       },
       {
@@ -57,6 +58,7 @@ const insertData = async () => {
         best_price: 1499,
         discount: "40% off",
         discount_price: 1799,
+        rating: 4.5,
         wishlist: false
       },
       {
@@ -68,6 +70,7 @@ const insertData = async () => {
         best_price: 1148,
         discount: "17% off",
         discount_price: 2481,
+        rating: 4.7,
         wishlist: true
       }
     ]);
