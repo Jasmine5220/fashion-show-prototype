@@ -1,18 +1,50 @@
-/* src/App.css */
-.app {
+.App {
   font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 
-header, main, footer {
-  width: 100%;
-  max-width: 1480px;
-  margin: 0 auto;
+.hero {
+  background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 150px 20px;
 }
 
-button {
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cta-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background: #ff6f61;
+  color: white;
   cursor: pointer;
 }
 
-button:hover {
-  opacity: 0.8;
+.about, .designers, .schedule, .live-stream, .gallery, .sponsors, .testimonials, main {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.designer-grid, .gallery-grid, .sponsor-logos, .testimonial-carousel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.designer-card, .testimonial-carousel blockquote {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
