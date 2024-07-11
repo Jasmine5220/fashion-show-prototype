@@ -1,50 +1,61 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './OutfitDetails.css';
+// src/components/OutfitDetails.js
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const OutfitDetails = () => {
+    const [items, setItems] = useState([]);
     const [outfits, setOutfits] = useState([]);
 
     useEffect(() => {
-        const fetchOutfits = async () => {
+        // Fetch items and outfits data from the backend
+        const fetchItems = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/outfits');
-                setOutfits(response.data);
+                const response = await axios.get("http://localhost:3000/api/items");
+                setItems(response.data);
             } catch (error) {
-                console.error('Error fetching outfits:', error);
+                console.error("Error fetching items:", error);
             }
         };
 
+        const fetchOutfits = async () => {
+            try {
+                const response = await axios.get("http://localhost:3000/api/outfits");
+                setOutfits(response.data);
+            } catch (error) {
+                console.error("Error fetching outfits:", error);
+            }
+        };
+
+        fetchItems();
         fetchOutfits();
     }, []);
 
     return (
-        <div className="outfit-details">
-            {outfits.map((outfit) => (
-                outfit.items.map((item) => (
-                    <div key={item._id} className="outfit-card">
-                        <div className="item-details">
-                            <img src={item.image} alt={item.name} className="item-image" />
-                            <div className="item-info">
-                                <h2>{item.name}</h2>
-                                <p>{item.description}</p>
-                                <div className="item-pricing">
-                                    <span className="item-price">₹{item.price}</span>
-                                    <span className="item-discount-price">₹{item.discount_price}</span>
-                                    <span className="item-discount">{item.discount}</span>
-                                </div>
-                                <p className="item-rating">Rating: 4.5 (based on 120 ratings)</p>
-                            </div>
-                        </div>
-                        <div className="outfit-info">
-                            <p>Likes: {outfit.likes}</p>
-                            <button className="wishlist">
-                                {outfit.wishlist ? "Remove from Wishlist" : "Add to Wishlist"}
-                            </button>
-                        </div>
-                    </div>
-                ))
-            ))}
+        <div>
+            <h1>Outfit Details</h1>
+
+            <h2>Items</h2>
+            <ul>
+                {items.map(item => (
+                    <li key={item._id}>
+                        {item.name} - {item.description}
+                    </li>
+                ))}
+            </ul>
+
+            <h2>Outfits</h2>
+            <ul>
+                {outfits.map(outfit => (
+                    <li key={outfit._id}>
+                        Outfit ID: {outfit.outfitid} - Likes: {outfit.likes}
+                        <ul>
+                            {outfit.items.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };
