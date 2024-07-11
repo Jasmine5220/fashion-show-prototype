@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+
 const Schema = mongoose.Schema;
 
 const ItemSchema = new Schema({
@@ -11,6 +12,7 @@ const ItemSchema = new Schema({
   best_price: { type: Number, required: true },
   discount: { type: String, required: true },
   discount_price: { type: Number, required: true },
+  rating: {type: Number,required: true},
   wishlist: { type: Boolean, default: false }
 });
 
