@@ -1,0 +1,18 @@
+/* src/App.css */
+.app {
+  font-family: Arial, sans-serif;
+}
+
+header, main, footer {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
