@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+.fashion-show {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.fashion-show h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    font-family: 'Merriweather', serif;
+}
+
+.check-trends {
+    background-color: #f8c8dc;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    text-decoration: none;
+}
+
+.check-trends:hover {
+    background-color: #e7a7bf;
+}
+
+.fashion-video {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,77 @@
+/* src/components/OutfitDetails.css */
+.outfit-details {
+  padding: 20px;
+}
+
+.outfit-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1 0 300px;
+  display: flex;
+}
+
+.item-image {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.price {
+  font-size: 1.2em;
+}
+
+.discounted-price {
+  color: red;
+  margin-right: 10px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.discount {
+  color: green;
+}
+
+.rating, .coupon-code {
+  margin-top: 10px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.add-to-bag, .wishlist {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wishlist {
+  background-color: #333;
+}
