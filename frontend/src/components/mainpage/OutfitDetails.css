@@ -1,6 +1,9 @@
 /* src/components/OutfitDetails.css */
 .outfit-details {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .outfit-card {
@@ -9,26 +12,27 @@
   margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Adjust width to fit better within the container */
 }
 
 .items-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create two columns */
+  gap: 20px; /* Add gap between item cards */
 }
 
 .item-card {
   border: 1px solid #ddd;
   border-radius: 10px;
-  margin: 10px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 1 0 300px;
   display: flex;
+  flex-direction: column;
 }
 
 .item-image {
-  max-width: 100px;
-  margin-right: 20px;
+  max-width: 100%;
+  margin-bottom: 20px; /* Add margin-bottom for spacing */
 }
 
 .item-details {
@@ -60,6 +64,8 @@
 
 .actions {
   margin-top: 20px;
+  display: flex;
+  gap: 10px; /* Add gap between buttons */
 }
 
 .add-to-bag, .wishlist {
@@ -67,11 +73,12 @@
   color: white;
   border: none;
   padding: 10px 20px;
-  margin-right: 10px;
   border-radius: 5px;
   cursor: pointer;
+  flex: 1; /* Make buttons take equal space */
 }
 
 .wishlist {
   background-color: #333;
 }
+
