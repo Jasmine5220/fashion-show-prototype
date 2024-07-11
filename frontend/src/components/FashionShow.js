@@ -1,21 +1,17 @@
-// src/components/FashionShow.js
 import React from 'react';
 import './FashionShow.css';
-import Sidebar from './Sidebar';
 
-function FashionShow({ videoUrl }) {
+const FashionShow = ({ videoUrl }) => {
     return (
-        <>
-            <section className="fashion-show">
-                <h1>Introducing Virtual Fashion Shows</h1>
-                <h2 className="check-trends">CHECK OUT TOP TRENDS</h2>
-                <div className="video-wrapper">
-                    <video src={videoUrl} controls></video>
-                </div>
-            </section>
-            <Sidebar />
-        </>
+        <div className="fashion-show">
+            <h1>Introducing Virtual Fashion Shows</h1>
+            <button className="check-trends">CHECK OUT TOP TRENDS</button>
+            <video className="fashion-video" controls>
+                <source src={videoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
     );
-}
+};
 
 export default FashionShow;
