@@ -1,24 +1,24 @@
 /* Sidebar Styles */
 .sidebar {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     margin-top: 20px;
+    gap: 20px; /* Add space between circles */
 }
 
 .sidebar-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 0;
     font-size: 24px;
     color: #555;
     cursor: pointer;
-    width: 60px; /* Fixed width */
-    height: 60px; /* Fixed height */
-    border: 2px solid #555; /* Border color */
+    width: 80px; /* Increase width */
+    height: 80px; /* Increase height */
+    border: 2px solid #555;
     border-radius: 50%; /* Circular shape */
-    justify-content: center; /* Center content */
+    justify-content: center;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -26,10 +26,22 @@
     background-color: #f0f0f0; /* Light grey background on hover */
 }
 
+.sidebar-item.liked {
+    background-color: #FF7B9A;
+    color: white;
+    border-color: #FF7B9A;
+}
+
+.sidebar-item.saved {
+    background-color: #FF7B9A;
+    color: white;
+    border-color: #FF7B9A;
+}
+
 .sidebar-item span {
     margin-top: 5px;
     font-size: 16px;
-    display: none; /* Hide span text */
+    display: block; /* Make span text visible */
 }
 
 /* Popup Styles */
@@ -81,48 +93,4 @@
 .comments-list p {
     margin: 5px 0;
     font-size: 16px;
-}
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.sidebar-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0;
-    font-size: 24px;
-    color: #555;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border: 2px solid #555;
-    border-radius: 50%;
-    justify-content: center;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.sidebar-item:hover {
-    background-color: #f0f0f0;
-}
-
-.sidebar-item.liked {
-    background-color: #FF7B9A;
-    color: white;
-    border-color: #FF7B9A;
-}
-
-.sidebar-item.saved {
-    background-color: #FF7B9A;
-    color: white;
-    border-color: #FF7B9A;
-}
-
-.sidebar-item span {
-    margin-top: 5px;
-    font-size: 16px;
-    display: block; /* Change display to block to make it visible */
 }
