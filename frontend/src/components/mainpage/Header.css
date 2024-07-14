@@ -1,0 +1,71 @@
+/* src/components/Header.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 98%;
+    font-size: small;
+    height: 20%;
+}
+
+.logo img {
+    height: 30px;
+    opacity: 0.8;
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.search-bar {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 800px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    color: #F4F4F5;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+}
+
+.user-options .option {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.user-options .option span {
+    margin-left: 5px;
+}
+
+.user-options .option svg {
+    font-size: 15px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+}
