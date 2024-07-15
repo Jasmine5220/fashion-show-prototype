@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@400;700&display=swap");
+
+.wardrobe-container-t {
+  padding: 20px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.wardrobe-title-t {
+  font-size: 2.2em;
+  height: 60px;
+  background-color: #ffcce4;
+  font-weight: lighter;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: "Merriweather", serif;
+}
+
+.outfit-card-t {
+  position: relative;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #ffcce4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.delete-outfit-btn-t {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: pink;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.items-row-t {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px; /* Reduced gap */
+}
+
+.item-card-t {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 5px; /* Reduced padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 0 0 auto;
+  width: 320px; /* Reduced width */
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.item-image-t {
+  width: 80px; /* Reduced width */
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.item-details-t {
+  flex: 1;
+}
+
+.item-details-t h3 {
+  font-size: 0.8em; /* Reduced font size */
+  margin-bottom: 4px;
+  margin-top: 2px;
+}
+
+.item-details-t p {
+  font-size: 0.6em; /* Reduced font size */
+  margin-bottom: 1px;
+  margin-top: 2px;
+}
+
+.price-info-t {
+  font-size: 0.5em; /* Reduced font size */
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.discounted-price-t {
+  color: red;
+  margin-right: 2px;
+}
+
+.original-price-t {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 2px;
+}
+
+.discount-info-t {
+  color: green;
+}
+
+.rating-info-t,
+.coupon-info-t,
+.best-price-info-t {
+  margin-top: 2px;
+}
+
+.action-buttons-t {
+  margin-top: 5px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.add-to-bag-btn-t,
+.wishlist-btn-t {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 3px 6px; /* Reduced padding */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.6em; /* Reduced font size */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.notification {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #ff4081;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,89 @@
+/* Sidebar Styles */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 8px;
+    margin-right:15px;
+}
+
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    color: #DGFFFF;
+    cursor: pointer;
+    width: 30px;
+    height: 60px;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    background-color: transparent; 
+    border: none;
+}
+
+.sidebar-item:hover {
+    background-color: #f0f0f0;
+}
+
+.sidebar-item.liked, .sidebar-item.saved {
+    color: #FF7B9A;
+}
+
+.sidebar-item span {
+    margin-top: 5px;
+    font-size: 0.4em;
+    display: block; /* Make span text visible */
+}
+
+/* Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.popup-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+.comments-list {
+    margin-top: 10px;
+}
+
+.comments-list p {
+    margin: 5px 0;
+    font-size: 16px;
+}

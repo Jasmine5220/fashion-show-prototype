@@ -1,0 +1,143 @@
+.outfit-details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.outfit-card {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 0.6em;
+}
+
+.items-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.item-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  transition: opacity 1s ease-in-out; /* Transition for each card */
+}
+
+.item-card.fade-in {
+  opacity: 1;
+}
+
+.item-card.fade-out {
+  opacity: 0;
+}
+
+.item-image {
+  margin-top: 30px;
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 10px;
+}
+
+.item-details {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.item-details h3 {
+  margin-bottom: 0px;
+}
+
+.item-details p {
+  margin-bottom: 0px;
+}
+
+.price {
+  font-size: 1.2em;
+  margin-bottom: 0px;
+}
+
+.discounted-price {
+  color: red;
+  margin-right: 5px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 5px;
+}
+
+.discount {
+  color: green;
+}
+
+.rating, .coupon-code, .best-price {
+  margin-top: 2px; /* Reduced space */
+}
+
+.actions {
+  margin-top: 5px; /* Reduced space */
+  display: flex;
+  gap: 10px;
+}
+
+.add-to-bag, .wishlist {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.7em;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.outfit-title {
+  font-size: 2.7em;
+  height: 40px;
+  background-color: #FFCCE4;
+  font-weight: lighter;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-bottom:20px;
+}
+
+.see-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+  visibility: visible; /* Default state */
+}
+
+.see-more.hidden {
+  visibility: hidden; /* Hidden state */
+}
+
+.see-more p {
+  font-size: 2.0em;
+  color: #555;
+  margin: 0;
+}
