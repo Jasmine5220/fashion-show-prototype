@@ -20,10 +20,10 @@ Welcome to the Myntra Virtual Fashion Show project! This innovative project comb
 ## Screenshots
 
 ### Landing Page
-![Landing Page](screenshots/landing-page.png)
+![Landing Page](screenshots/landing-page.jpg)
 
 ### Fashion Show Page
-![Fashion Show Page](screenshots/fashion-show-page.png)
+![Fashion Show Page](screenshots/fashion-show-page.jpg)
 
 ### Interactive Buttons
 ![Interactive Buttons](screenshots/interactive-buttons.png)
@@ -109,7 +109,5 @@ myntra-virtual-fashion-show/
 ## License
 
 This project is licensed under the MIT License.
-
----
 
 ## Thank you for visiting our project! Your perfect outfit would be a click away!
