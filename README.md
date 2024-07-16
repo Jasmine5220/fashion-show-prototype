@@ -112,5 +112,4 @@ This project is licensed under the MIT License.
 
 ---
 
-Thank you for visiting our project! We hope you enjoy the Myntra Virtual Fashion Show experience.
-```
+## Thank you for visiting our project! Your perfect outfit would be a click away!
