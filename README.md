@@ -1,4 +1,4 @@
-# Myntra Virtual Fashion Show
+# Myntra Virtual Fashion Show - Virtual Couture
 
 Welcome to the Myntra Virtual Fashion Show project! This innovative project combines the power of the MERN stack and Unreal Engine 5 to create an immersive and interactive fashion experience. Users can explore a virtual runway, engage with outfits, and shop directly from their virtual wardrobe.
 
